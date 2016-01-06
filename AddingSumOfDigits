@@ -1,0 +1,21 @@
+import java.util.*;
+public class SumOfDigits {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num, sum=0 ;
+		Scanner scnr = new Scanner(System.in);
+		
+		System.out.println("Enter any random number, with any number of digits:  ");
+		num = scnr.nextInt();
+		
+		while(num!=0) {
+		int rem = num % 10;
+		sum = sum + rem;
+		int quo = num / 10;
+		num = quo;
+		}
+		System.out.println("Final sum equates to "+sum);
+	}
+
+}
