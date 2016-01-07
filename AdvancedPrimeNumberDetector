@@ -1,0 +1,40 @@
+import java.util.*;
+public class AdvancePrimeNumberDetector {
+
+	public static void main(String[] args) {
+
+		Scanner scnr = new Scanner(System.in);
+		
+		System.out.println("Please maintain the following standards \n 1. Enter only positive integers \n 2. It's stupid to enter the initial bar with 1\n");
+		System.out.println("Enter the initial bar: ");
+		int initial = scnr.nextInt();
+		System.out.println("Enter the limit bar: ");
+		int limit = scnr.nextInt();
+		
+		if(initial==1) {
+			System.out.println("Please, remove 1 from the solution..");
+		}
+		int counter=initial ; 
+		while(counter <= limit) {
+
+			int num = 2;
+			boolean flag = false;
+			
+			while(counter>num)	{
+
+				if(counter%num == 0) {
+					flag = true;
+					break;
+				} else num++ ;
+			} 
+			
+			if(flag == false) {
+				System.out.print(counter+" ");
+
+			}
+			counter++;
+
+		}
+		System.out.println("\n....these are all the prime numbers for the given range.");
+	}
+}
